@@ -28,7 +28,7 @@ class TableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         tvListView.reloadData() //이 함수는 뷰가 전환될 때 호출되는 함수,
-        //리스트가 추가되어 main view로 돌아올 때 호출되며 추가된 내용을 리스트에 보여준다.
+        //리스트가 추가되어 main view로 돌아올 때 호출되며 추가된 내용을 리스트(목록) 에 보여준다.
     }
     
     // MARK: - Table view data source
@@ -105,14 +105,21 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //앞장 11-5절 참고, 세그웨이 이용하여 뷰 전환
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "sgDetail" {
+            let cell = sender as! UITableViewCell
+            let indexPath = self.tvListView.indexPath(for : cell)
+            let detailView = segue.destination as! DetailViewController
+            detailView.receiveItem(items[((indexPath! as NSIndexPath).row)])
+        }
     }
-    */
+    
 
 }
