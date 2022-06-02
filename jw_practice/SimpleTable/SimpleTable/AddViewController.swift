@@ -18,6 +18,10 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func btnAddItem(_ sender: UIButton) {
+        items.append(tfAddItem.text!) //items에 텍스트 필드의 텍스트 값을 추가
+        itemsImageFile.append("clock.png") // itmesImageFile에는 무조건 clock.png파일을 추가
+        tfAddItem.text="" //텍스트 필드의 내용을 지운다.
+        _ = navigationController?.popViewController(animated: true)//루트 뷰 컨트롤러, 즉 테이블 뷰로 돌아간다.
     }
     
     /*
