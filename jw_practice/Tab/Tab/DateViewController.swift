@@ -1,0 +1,58 @@
+//
+//  ViewController.swift
+//  DatePicker220502
+//
+//  Created by 장진웅 on 2022/05/02.
+//  Copyright © 2022 cbycongbab. All rights reserved.
+//
+
+import UIKit
+
+class DateViewController: UIViewController {
+    let timeSelector : Selector = #selector(ViewController.updateTime)
+    let interval = 1.0
+    var count = 0
+    var alarmTime : String?
+
+    @IBOutlet var lblCurrentTime: UILabel!
+    @IBOutlet var lblPickerTime: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true) //순서대로 타이머간격, 동작될 view, 타이머가 구동될 때 실행할 함수
+    }
+
+    @IBAction func changeDatePicker(_ sender: UIDatePicker) {
+        let datePickerView = sender
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm EEE"
+        lblPickerTime.text =
+            "선택시간: " + formatter.string(from: datePickerView.date)
+        //아래는 mission
+        formatter.dateFormat = "hh:mm aaa"
+        alarmTime = formatter.string(from: datePickerView.date)
+    }
+    @objc func updateTime() {
+       // lblCurrentTime.text = String(count)
+        //count = count + 1
+        let date = NSDate()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss EEE"
+        lblCurrentTime.text = "현재시간" + formatter.string(from: date as Date)
+        //under part : extra mission
+        
+        formatter.dateFormat = "hh:mm aaa"
+        let currentTime = formatter.string(from: date as Date)
+        
+        if(alarmTime == currentTime){
+            view.backgroundColor = UIColor.red
+        }
+        else{
+            view.backgroundColor = UIColor.white
+        }
+    }
+    
+}
+
