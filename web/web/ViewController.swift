@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-var images = ["NoBackGound120@4x.png"]
+//var images = ["NoBackGound120@4x.png"]
 
 
 class ViewController: UIViewController, WKNavigationDelegate {
@@ -31,9 +31,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        imgLogo = UIImage(named: "NoBackGound120@4x.png") // 되나?
+       // imgLogo = UIImage(named: "NoBackGound120@4x.png") // 되나?
         
-        LogoImgView.image = imgLogo
+      //  LogoImgView.image = imgLogo
         
         myWebView.navigationDelegate = self
         loadWebPage("https://huskycat1202.github.io/clothes/index.html")
