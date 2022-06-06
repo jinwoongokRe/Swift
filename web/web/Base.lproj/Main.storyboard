@@ -16,48 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRC-YV-hAV">
-                                <rect key="frame" x="20" y="63" width="301" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zc9-C4-ZrS">
-                                <rect key="frame" x="341" y="65" width="43" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go"/>
-                                <connections>
-                                    <action selector="btnGotoUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="trw-ST-mmJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98T-ce-HXg">
-                                <rect key="frame" x="14" y="105" width="56" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Site1"/>
-                                <connections>
-                                    <action selector="btnGoSite1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQZ-Kn-br3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7y-Da-Ust">
-                                <rect key="frame" x="117" y="105" width="58" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Site2"/>
-                                <connections>
-                                    <action selector="btnGoSite2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DWg-sW-mAd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqD-Tr-Ch0">
-                                <rect key="frame" x="217" y="105" width="55" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Html"/>
-                                <connections>
-                                    <action selector="btnLoadHtmlString:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DoO-LZ-RLD"/>
-                                </connections>
-                            </button>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gy9-c8-hqx">
                                 <rect key="frame" x="7" y="136" width="399" height="700"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -102,23 +60,18 @@
                                 <rect key="frame" x="188" y="429" width="39" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhL-4t-t4G">
-                                <rect key="frame" x="308" y="104" width="47" height="31"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NoBackGound120.png" translatesAutoresizingMaskIntoConstraints="NO" id="Et8-ey-vg4">
+                                <rect key="frame" x="7" y="33" width="269" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="File"/>
-                                <connections>
-                                    <action selector="btnLoadHtmlFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X2w-0v-oz7"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="LogoImgView" destination="Et8-ey-vg4" id="pOJ-YH-myX"/>
                         <outlet property="myActivityIndicator" destination="ckT-87-sdJ" id="ZtS-Cc-whs"/>
                         <outlet property="myWebView" destination="gy9-c8-hqx" id="27n-Y4-6WB"/>
-                        <outlet property="txtUrl" destination="zRC-YV-hAV" id="NeN-V0-jOk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,6 +80,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NoBackGound120.png" width="120" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

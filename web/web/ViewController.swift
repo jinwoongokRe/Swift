@@ -8,9 +8,15 @@
 import UIKit
 import WebKit
 
+var images = ["NoBackGound120@4x.png"]
+
+
 class ViewController: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet var txtUrl: UITextField!
+    var imgLogo : UIImage? //Logo 이미지가 있는 UIImage타입의 변수
+    
+    @IBOutlet var LogoImgView: UIImageView!
+    //    @IBOutlet var txtUrl: UITextField!
     @IBOutlet var myWebView: WKWebView!
     @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
     
@@ -25,6 +31,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        imgLogo = UIImage(named: "NoBackGound120@4x.png") // 되나?
+        
+        LogoImgView.image = imgLogo
         
         myWebView.navigationDelegate = self
         loadWebPage("https://huskycat1202.github.io/clothes/index.html")
@@ -46,24 +55,29 @@ class ViewController: UIViewController, WKNavigationDelegate {
         myActivityIndicator.isHidden = true
     }
 
-    @IBAction func btnGotoUrl(_ sender: UIButton) {
-    }
+//    @IBAction func btnGotoUrl(_ sender: UIButton) {
+//
+//    }
     
-    @IBAction func btnGoSite1(_ sender: UIButton) {
-    }
-    @IBAction func btnGoSite2(_ sender: UIButton) {
-    }
-    @IBAction func btnLoadHtmlString(_ sender: UIButton) {
-    }
-    @IBAction func btnLoadHtmlFile(_ sender: UIButton) {
-    }
+//    @IBAction func btnGoSite1(_ sender: UIButton) {
+//    }
+//    @IBAction func btnGoSite2(_ sender: UIButton) {
+//    }
+//    @IBAction func btnLoadHtmlString(_ sender: UIButton) {
+//    }
+//    @IBAction func btnLoadHtmlFile(_ sender: UIButton) {
+//    }
     @IBAction func btnStop(_ sender: UIBarButtonItem) {
+        myWebView.stopLoading() // 웹 페이지의 로딩을 중지시키는 함수를 호출
     }
     @IBAction func btnReload(_ sender: UIBarButtonItem) {
+        myWebView.reload() //웹 페이지의 로딩을 중지시키는 함수를 호출
     }
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
+        myWebView.goBack() // 이전 웹 페이지로 이동시키는 함수를 호출
     }
     @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
+        myWebView.goForward() //다음 웹 페이지로 이동시키는 함수를 호출
     }
     
 }

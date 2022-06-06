@@ -16,6 +16,8 @@
 		B5EDB97C284E5F8800516911 /* webTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EDB97B284E5F8800516911 /* webTests.swift */; };
 		B5EDB986284E5F8800516911 /* webUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EDB985284E5F8800516911 /* webUITests.swift */; };
 		B5EDB988284E5F8800516911 /* webUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EDB987284E5F8800516911 /* webUITestsLaunchTests.swift */; };
+		B5EDB997284E93C700516911 /* NoBackGound120@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EDB996284E93C700516911 /* NoBackGound120@4x.png */; };
+		B5EDB998284E93C700516911 /* NoBackGound120@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EDB996284E93C700516911 /* NoBackGound120@4x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		B5EDB981284E5F8800516911 /* webUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EDB985284E5F8800516911 /* webUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webUITests.swift; sourceTree = "<group>"; };
 		B5EDB987284E5F8800516911 /* webUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B5EDB996284E93C700516911 /* NoBackGound120@4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NoBackGound120@4x.png"; path = "NALIBO_Logo/NALIBO/Non-Color/NoBackGound120@4x.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 		B5EDB963284E5F8400516911 /* web */ = {
 			isa = PBXGroup;
 			children = (
+				B5EDB996284E93C700516911 /* NoBackGound120@4x.png */,
 				B5EDB964284E5F8400516911 /* AppDelegate.swift */,
 				B5EDB966284E5F8400516911 /* SceneDelegate.swift */,
 				B5EDB968284E5F8400516911 /* ViewController.swift */,
@@ -233,6 +237,7 @@
 			files = (
 				B5EDB971284E5F8700516911 /* LaunchScreen.storyboard in Resources */,
 				B5EDB96E284E5F8700516911 /* Assets.xcassets in Resources */,
+				B5EDB997284E93C700516911 /* NoBackGound120@4x.png in Resources */,
 				B5EDB96C284E5F8400516911 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5EDB998284E93C700516911 /* NoBackGound120@4x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
