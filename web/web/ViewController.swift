@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet var txtUrl: UITextField!
     @IBOutlet var myWebView: WKWebView!
@@ -26,7 +26,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        myWebView.navigationDelegate = self
         loadWebPage("https://huskycat1202.github.io/clothes/index.html")
+    }
+    
+    //myWebView가 로딩 중일 때 인디케이터를 실행하고 화면에 나타나게함.
+    func webView(_ webView: WKWebView, didCommit navigation : WKNavigation!) {
+        myActivityIndicator.startAnimating()
+        myActivityIndicator.isHidden = false
+    }
+    //로딩 완료되었을 때 동작하므로 인디케이터를 중지하고 숨김.
+    func webView(_ webView: WKWebView, didFinish navigation : WKNavigation!) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
+    }
+    //로딩 실패시 동작하므로 역시 인디케이터는 중지하고 숨김.
+    func webView(_ webView: WKWebView, didFail navigation : WKNavigation!, withError error: Error) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
     }
 
     @IBAction func btnGotoUrl(_ sender: UIButton) {
