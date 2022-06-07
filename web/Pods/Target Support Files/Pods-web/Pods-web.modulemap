@@ -1,0 +1,6 @@
+framework module Pods_web {
+  umbrella header "Pods-web-umbrella.h"
+
+  export *
+  module * { export * }
+}
